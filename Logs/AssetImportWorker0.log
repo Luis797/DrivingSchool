@@ -50,3 +50,30 @@ Mono: successfully reloaded assembly
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 Registered in 0.000646 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1144 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.3 MB.
+System memory in use after: 58.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1587.
+Total: 2.728000 ms (FindLiveObjects: 0.137600 ms CreateObjectMapping: 0.047900 ms MarkObjects: 2.455700 ms  DeleteObjects: 0.085700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/Setting.cs
+  artifactKey: Guid(f7ffa5cd09984e544844f0209e256103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Setting.cs using Guid(f7ffa5cd09984e544844f0209e256103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d661354b996c652b1bdb2c1ba3852c7') in 0.072583 seconds
+  Import took 0.075435 seconds .
+
