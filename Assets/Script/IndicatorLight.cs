@@ -32,11 +32,12 @@ public class IndicatorLight : MonoBehaviour
         if (indicatorTimer >= 1f)
             indicatorTimer = 0f;
     }
-    void Lighting(float input)
+    ///<summary>
+    ///Define the lighting setting accoridng to the time to make blink effect
+    ///</summary>
+    private void Lighting(float input)
     {
-
         _light.intensity = Mathf.Lerp(_light.intensity, input, Time.deltaTime * inertia * 20f);
-
     }
 
 }

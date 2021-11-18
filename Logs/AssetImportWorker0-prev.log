@@ -1,0 +1,156 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 22000.168; Version 2009; 64bit' Language: 'en' Physical Memory: 16232 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+G:\UnityInstalledFiles\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+F:/Unity/FreeLancing/DrivingSchool
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50004
+Successfully changed project path to: F:/Unity/FreeLancing/DrivingSchool
+F:/Unity/FreeLancing/DrivingSchool
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 32.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Unity/FreeLancing/DrivingSchool/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   
+    VRAM:     3962 MB
+    Driver:   27.21.14.5167
+Initialize mono
+Mono path[0] = 'G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: G:/UnityInstalledFiles/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001420 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 33.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.219 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.036 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1144 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.3 MB.
+System memory in use after: 58.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1587.
+Total: 2.958200 ms (FindLiveObjects: 0.194900 ms CreateObjectMapping: 0.059600 ms MarkObjects: 2.622600 ms  DeleteObjects: 0.079600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/SounSetting.asset
+  artifactKey: Guid(a0bea589c00b3a7499bc7c99f5792f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/SounSetting.asset using Guid(a0bea589c00b3a7499bc7c99f5792f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff55ff62fd2792fae6f42680aff7c7fb') in 0.157769 seconds
+  Import took 0.160503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.487976 seconds.
+  path: Assets/Script/SoundSetting.asset
+  artifactKey: Guid(a0bea589c00b3a7499bc7c99f5792f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/SoundSetting.asset using Guid(a0bea589c00b3a7499bc7c99f5792f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29944918c180088ce3299a5ff8e93de3') in 0.012136 seconds
+  Import took 0.036350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.360993 seconds.
+  path: Assets/Script/cameraController.cs
+  artifactKey: Guid(627987b7cac11934aa2b2fca2ce3e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/cameraController.cs using Guid(627987b7cac11934aa2b2fca2ce3e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8b908470cb22db799767839bf00d64') in 0.040982 seconds
+  Import took 0.070011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007567 seconds.
+  path: Assets/Script/cameraController.cs
+  artifactKey: Guid(627987b7cac11934aa2b2fca2ce3e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/cameraController.cs using Guid(627987b7cac11934aa2b2fca2ce3e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8b908470cb22db799767839bf00d64') in 0.004145 seconds
+  Import took 0.042779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.600688 seconds.
+  path: Assets/Script/UpDownAnimation.cs
+  artifactKey: Guid(b059e2760c0600b47b15bb3230620673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/UpDownAnimation.cs using Guid(b059e2760c0600b47b15bb3230620673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa99f269148e5f42bfde78740d505bca') in 0.017315 seconds
+  Import took 0.020517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002543 seconds.
+  path: Assets/Script/UpDownAnimation.cs
+  artifactKey: Guid(b059e2760c0600b47b15bb3230620673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/UpDownAnimation.cs using Guid(b059e2760c0600b47b15bb3230620673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa99f269148e5f42bfde78740d505bca') in 0.007796 seconds
+  Import took 0.011004 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000614 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.031 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.0 MB.
+System memory in use after: 58.1 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1590.
+Total: 2.018900 ms (FindLiveObjects: 0.175800 ms CreateObjectMapping: 0.047000 ms MarkObjects: 1.771500 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.674372 seconds.
+  path: Assets/Script/SoundController.cs
+  artifactKey: Guid(6331c30c909a5ac4396db8e98d44fa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/SoundController.cs using Guid(6331c30c909a5ac4396db8e98d44fa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b48b4cc3426be0e11d82e7fc1a583b3f') in 0.045386 seconds
+  Import took 0.047824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015688 seconds.
+  path: Assets/Script/SoundController.cs
+  artifactKey: Guid(6331c30c909a5ac4396db8e98d44fa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/SoundController.cs using Guid(6331c30c909a5ac4396db8e98d44fa10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b48b4cc3426be0e11d82e7fc1a583b3f') in 0.004270 seconds
+  Import took 0.006742 seconds .
+

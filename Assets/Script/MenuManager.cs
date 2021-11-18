@@ -48,6 +48,9 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = showInstructio ? 0 : 1;
         showLevels.SetActive(showInstructio);
     }
+    ///<summary>
+    ///Show the instruction for the game play
+    ///</summary>
     public void ShowInstruction()
     {
         showInstruction = !showInstruction;

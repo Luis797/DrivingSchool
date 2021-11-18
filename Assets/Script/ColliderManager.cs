@@ -4,7 +4,7 @@ using System.Collections;
 public class ColliderManager : MonoBehaviour
 {
     public string Info;
-    public bool isDoubleFace=false;
+    bool isDoubleFace=false;
     public Manager managerObj;
     public Rigidbody _rig;
 	// Use this for initialization

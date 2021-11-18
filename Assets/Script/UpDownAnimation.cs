@@ -21,6 +21,8 @@ public class UpDownAnimation : MonoBehaviour
     {
         cycle = Time.realtimeSinceStartup / period;
         rawCycle = Mathf.Sin(cycle * tau);
+        ///transform the position up and down inbetween defined movement factor
+        ///This can be change to make it left right
         transform.position = transform.position + transform.up * movementFactor * rawCycle;
     }
 }

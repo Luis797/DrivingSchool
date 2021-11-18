@@ -12,30 +12,24 @@ public class CarEngine : MonoBehaviour {
 	private int currentNode = 0;
 
 	//public variables
-	public Transform path;
-	public Transform[] tyres;
-	public float mAISteer = 25f;
-	public float mAITorque = 2500f;
-	public float mAIDecelerationSpeed = 0f;
+	[SerializeField]Transform path;
+	[SerializeField] Transform[] tyres;
+	float mAISteer = 25f;
+	float mAITorque = 2500f;
 	public WheelCollider[] wheelCol;
-	public Vector3 cOfMass = new Vector3(0, 0.7f, 0);
-	public float aiCurrentSpeed;
-	public float mAISpeed;
-	public float mAIMagnitude;
-	public int wheelColTorqueLength;
-	public int wcAIDecelerationSpeedLength;
-	public bool aiTurning;
-	public bool increment = false;
-	/*[Header("Sensors")]
-	public float sensorLength = 3f;
-	public float frontSensorPos = 0.5f;
-	public float frontSideSensorPosition = 0.2f;*/
-
-	// Use this for initialization
+	Vector3 cOfMass = new Vector3(0, 0.7f, 0);
+	float aiCurrentSpeed;
+	float mAISpeed;
+	[SerializeField]float mAIMagnitude;
+	int wheelColTorqueLength = 4;
+	bool aiTurning;
+	
 	void Start () {
 		rbody = gameObject.GetComponent<Rigidbody>();
 		rbody.centerOfMass = cOfMass;
+		///get all nodes from the path children.
 		Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
+		///Add all the list of nodes
 		nodes = new List<Transform>();
 		for(int i = 0; i < pathTransforms.Length; i++){
 			if(pathTransforms[i] != path.transform){
@@ -51,40 +45,15 @@ public class CarEngine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//SensorsFunc();
 		ApplySteer();
 		CarDrive();
 		CheckWaypointDistance();
 	}
 
-	/*void SensorsFunc(){
-		RaycastHit hit;
-		Vector3 sensorStartPos = transform.position;
-		Debug.Log(sensorStartPos);
-		sensorStartPos.z += frontSensorPos;
-
-		//front center sensor
-		if(Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength)){
-			
-		}
-		Debug.DrawLine(sensorStartPos, hit.point);
-
-		//front right sensor
-		sensorStartPos.x += frontSideSensorPosition;
-		if(Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength)){
-
-		}
-		Debug.DrawLine(sensorStartPos, hit.point);
-
-		//front left sensor
-		sensorStartPos.x -= 2 * frontSideSensorPosition;
-		if(Physics.Raycast(sensorStartPos, transform.forward, out hit, sensorLength)){
-
-		}
-		Debug.DrawLine(sensorStartPos, hit.point);
-	}*/
-
-	void ApplySteer(){
+	///<summary>
+	///Apply steering to the wheels according to the node informaiton
+	///</summary>
+	private void ApplySteer(){
 		Vector3 relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
 		relativeVector /= relativeVector.magnitude; // same thing as relativeVector = relativeVector / relativeVector.magnitude
 		float newSteer = (relativeVector.x / relativeVector.magnitude) * mAISteer;
@@ -92,7 +61,10 @@ public class CarEngine : MonoBehaviour {
 		wheelCol[1].steerAngle = newSteer;
 	}
 
-	void CheckWaypointDistance(){
+	///<summary>
+	///Determine the next check point
+	///</summary>
+	private void CheckWaypointDistance(){
 		if(Vector3.Distance(transform.position, nodes[currentNode].position) < 1f){
 			if(currentNode == nodes.Count - 1){
 				currentNode = 0;
@@ -102,7 +74,12 @@ public class CarEngine : MonoBehaviour {
 		}
 	}
 
-	void CarDrive(){
+	///<summary>
+	///This is used to provide torque to the motors 
+	///THis check the ai current speed and provide speed if necessary
+	///</summary>
+	private void CarDrive(){
+		///Identify the current speed of the car
 		aiCurrentSpeed = wheelCol[2].radius * wheelCol[2].rpm * 60/1000 * Mathf.PI * 2;
 		aiCurrentSpeed = Mathf.Round(aiCurrentSpeed);
 		if(aiCurrentSpeed < mAISpeed && rbody.velocity.magnitude <= mAIMagnitude){
@@ -115,8 +92,10 @@ public class CarEngine : MonoBehaviour {
 			}
 		}
 	}
-
-	void RotateTires(){
+	///<summary>
+	///Rotate the tires according to the AI car rotate info
+	///</summary>
+	private void RotateTires(){
 		//Spinning Tires
 		for(int i = 0; i < wheelColTorqueLength; i++){
 			tyres[i].Rotate(wheelCol[i].rpm/60 * 360 * Time.deltaTime, 0f, 0f);
@@ -127,17 +106,11 @@ public class CarEngine : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider other){
-		
-		
+	void OnTriggerEnter(Collider other){	
 			mAISpeed = 120f;
 			mAITorque =Random.Range(100, 500);
 			aiCurrentSpeed =Random.Range(100, 150);
-			aiTurning = true;
-
-		
-		
+			aiTurning = true;	
 	}
-
 	
 }

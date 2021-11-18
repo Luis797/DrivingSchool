@@ -6,12 +6,12 @@ public class cameraController : MonoBehaviour {
 
 	//Public Variables
 	public Transform car;
-	public float distance = 6.4f;
-	public float height = 1.4f;
-	public float rotationDamping = 3.0f;
-	public float heightDamping = 2.0f;
-	public float zoomRatio = 0.5f;
-	public float defaultFOV = 60f;
+	float distance = 6.4f;
+	float height = 1.4f;
+	float rotationDamping = 3.0f;
+	float heightDamping = 2.0f;
+	float zoomRatio = 0.5f;
+	float defaultFOV = 60f;
 
 	//Private Variables
 	Vector3 rotationVector;
