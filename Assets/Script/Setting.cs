@@ -23,8 +23,6 @@ public class Setting : MonoBehaviour
     }
     void SetOptionsUI()
     {
-
-
         MusicSlider.value = Settings.GetMusicLevel();
         SoundFxSlider.value = Settings.GetSoundFxLevel();
     }
@@ -37,8 +35,7 @@ public class Setting : MonoBehaviour
 
 
     public void SetSfxLvl(float sfxLvl)
-    {
-       
+    {   
         audioMixer.SetFloat("SoundFx", sfxLvl);
         SaveAudioSetting();
     }

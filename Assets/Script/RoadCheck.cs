@@ -13,21 +13,28 @@ public class RoadCheck : MonoBehaviour
     }
     void Update()
     {
-        if(Physics.Raycast(transform.position + Vector3.up,-transform.up,out hit, 20))
+        if (Physics.Raycast(transform.position + Vector3.up, -transform.up, out hit, 20))
         {
-            print(hit.collider.name);
-            if (hit.collider == null) return;
-            if (hit.collider.CompareTag("ground"))
+            CheckGround();
+        }
+    }
+
+    ///<summary>
+    ///Check if the vehicle is in the ground
+    ///</summary>
+    private void CheckGround()
+    {
+        if (hit.collider == null) return;
+        if (hit.collider.CompareTag("ground"))
+        {
+            isGround = true;
+        }
+        else
+        {
+            if (isGround)
             {
-                isGround = true;
-            }
-            else
-            {
-                if (isGround)
-                {
-                    manager.ShowInfo("4");
-                    isGround = false;
-                }
+                manager.ShowInfo("4");
+                isGround = false;
             }
         }
     }

@@ -21,6 +21,8 @@ public class Timer : MonoBehaviour
     {
         countDownText.text = "";
     }
+
+    //THis is repeatedly calling itself for i times before exiting it out
     IEnumerator NextCountDown(int i)
     {
        
@@ -47,8 +49,4 @@ public class Timer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
